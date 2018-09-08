@@ -9,7 +9,7 @@ export DOMAIN=${DOMAIN:="$(curl -s ipinfo.io/ip).nip.io"}
 export USERNAME=${USERNAME:="$(whoami)"}
 export PASSWORD=${PASSWORD:=password}
 export VERSION=${VERSION:="3.9.0"}
-export SCRIPT_REPO=${SCRIPT_REPO:="https://raw.githubusercontent.com/gshipley/installcentos/master"}
+export SCRIPT_REPO=${SCRIPT_REPO:="https://raw.githubusercontent.com/baibhav73/installcentos/master/inventory.ini"}
 export IP=${IP:="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"}
 export API_PORT=${API_PORT:="8443"}
 
@@ -118,5 +118,3 @@ echo "* Login using:"
 echo "*"
 echo "$ oc login -u ${USERNAME} -p ${PASSWORD} https://console.$DOMAIN:$API_PORT/"
 echo "******"
-
-oc login -u ${USERNAME} -p ${PASSWORD} https://console.$DOMAIN:$API_PORT/
